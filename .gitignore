@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.tools/
+.preview/
+__pycache__/
+.next/
+out/
+*.tsbuildinfo
+playwright-report/
+test-results/
+.env*.local
