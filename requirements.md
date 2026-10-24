@@ -1,7 +1,7 @@
 # Wymagania projektu
 
 - **Node.js 24 LTS** (`>=24.0.0 <25`). Projekt przygotowano z Node.js **24.22.1**.
-- **npm 11 lub nowszy**, dostarczany z Node.js (użyto **11.19.1**).
+- **npm 10.9.2 lub nowszy**. Czysta instalacja jest weryfikowana z npm **10.9.2**, używanym przez Cloudflare. Lokalnie można używać npm **11.19.1**.
 - Aktualna przeglądarka obsługująca CSS sticky, Canvas i SVG.
 - Do testów E2E: Microsoft Edge. Playwright korzysta z lokalnie zainstalowanego Edge; nie wymaga osobnego pobierania Chromium.
 

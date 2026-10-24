@@ -4,7 +4,7 @@ Responsywny, anglojęzyczny one-pager zbudowany na podstawie „Serenith Website
 
 ## Requirements / wymagania
 
-**Node.js 24 LTS i npm ≥11.** Pełne wymagania i instalacja Windows: [requirements.md](requirements.md). Wersja Node.js jest zadeklarowana w `engines`, `.nvmrc` i `.node-version`.
+**Node.js 24 LTS i npm ≥10.9.2.** Pełne wymagania i instalacja Windows: [requirements.md](requirements.md). Wersja Node.js jest zadeklarowana w `engines`, `.nvmrc` i `.node-version`.
 
 ## Uruchomienie
 
@@ -36,7 +36,7 @@ W Cloudflare Workers Builds ustaw:
 - Deploy command: `npm run deploy` (również `npx wrangler deploy` korzysta z tej samej konfiguracji)
 - Node.js: `24`
 
-Ostrzeżenie `EBADENGINE` w załączonym logu dotyczy npm 10 przy zadeklarowanym npm ≥11. Nie zatrzymało ono instalacji ani buildu; awaria nastąpiła później w automatycznym adapterze OpenNext. Lokalnie używaj wersji npm opisanej w wymaganiach.
+Projekt obsługuje npm 10.9.2 używany przez Cloudflare. `package.json` i `package-lock.json` wysyłaj razem. Override `undici` jest zadeklarowany globalnie, aby npm 10 i npm 11 zgodnie rozwiązywały tę zależność do poprawionej wersji 7.30.1.
 
 Przed ponownym wdrożeniem wyślij zmienione pliki do gałęzi używanej przez Cloudflare. Konfiguracja w repozytorium zapobiega automatycznej migracji do OpenNext uruchamianej przez Wrangler przy braku konfiguracji.
 

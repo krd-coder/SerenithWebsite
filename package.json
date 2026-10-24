@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "node": ">=24.0.0 <25",
-    "npm": ">=11"
+    "npm": ">=10.9.2"
   },
   "scripts": {
     "predev": "node scripts/sync-assets.mjs",
@@ -20,9 +20,7 @@
     "format:check": "prettier --check src tests scripts *.ts *.json *.md"
   },
   "overrides": {
-    "miniflare": {
-      "undici": "7.30.1"
-    }
+    "undici": "7.30.1"
   },
   "dependencies": {
     "@fontsource-variable/inter": "5.3.0",
