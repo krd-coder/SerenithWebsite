@@ -24,7 +24,37 @@ npm.cmd run build
 npm.cmd run preview
 ```
 
-Podgląd: http://127.0.0.1:4173. Build tworzy katalog `out/`, gotowy do hostingu statycznego. Serwer podglądu jest lokalnym narzędziem deweloperskim. Publikacja na serwerze nie została skonfigurowana.
+Podgląd: http://127.0.0.1:4173. Build tworzy katalog `out/`, gotowy do hostingu statycznego. Serwer podglądu jest lokalnym narzędziem deweloperskim.
+
+## Cloudflare Workers — publikacja statyczna
+
+`wrangler.jsonc` konfiguruje Worker `serenith` do serwowania katalogu `out/`. Projekt korzysta ze statycznego eksportu Next.js, więc nie potrzebuje adaptera OpenNext ani katalogu `.next/standalone`.
+
+W Cloudflare Workers Builds ustaw:
+
+- Build command: `npm run build`
+- Deploy command: `npm run deploy` (również `npx wrangler deploy` korzysta z tej samej konfiguracji)
+- Node.js: `24`
+
+Ostrzeżenie `EBADENGINE` w załączonym logu dotyczy npm 10 przy zadeklarowanym npm ≥11. Nie zatrzymało ono instalacji ani buildu; awaria nastąpiła później w automatycznym adapterze OpenNext. Lokalnie używaj wersji npm opisanej w wymaganiach.
+
+Przed ponownym wdrożeniem wyślij zmienione pliki do gałęzi używanej przez Cloudflare. Konfiguracja w repozytorium zapobiega automatycznej migracji do OpenNext uruchamianej przez Wrangler przy braku konfiguracji.
+
+Sprawdzenie bez publikowania:
+
+```powershell
+npm.cmd run build
+npm.cmd run deploy:check
+```
+
+Ręczna publikacja po zalogowaniu (`npx wrangler login`):
+
+```powershell
+npm.cmd run build
+npm.cmd run deploy
+```
+
+Cloudflare Pages jest osobną ścieżką wdrożenia: build `npm run build`, katalog wynikowy `out`. Polecenie `wrangler pages deploy` dotyczy projektu Pages, natomiast obecny log pochodzi z Workers Builds.
 
 ## Weryfikacja
 

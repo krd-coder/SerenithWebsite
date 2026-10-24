@@ -4,6 +4,7 @@ dist/
 .preview/
 __pycache__/
 .next/
+.wrangler/
 out/
 *.tsbuildinfo
 playwright-report/
