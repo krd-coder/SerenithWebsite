@@ -1,6 +1,6 @@
 # Serenith Website
 
-Responsywny, anglojęzyczny one-pager zbudowany na podstawie „Serenith Website.md”. Next.js App Router + TypeScript, statyczny eksport, GSAP ScrollTrigger i Lenis. Fonty Inter oraz JetBrains Mono są hostowane lokalnie. Oryginalne `logo.svg` pozostaje zachowane; kopia w `public/` służy aplikacji.
+Responsywny, anglojęzyczny one-pager zbudowany na podstawie „Serenith Website.md”. Next.js App Router + TypeScript, statyczny eksport, GSAP ScrollTrigger i Lenis. Fonty Inter oraz JetBrains Mono są hostowane lokalnie. Oryginalne `logo.svg` i `logo_square.svg` pozostają zachowane; kopie w `public/` służą aplikacji.
 
 ## Requirements / wymagania
 
@@ -8,7 +8,7 @@ Responsywny, anglojęzyczny one-pager zbudowany na podstawie „Serenith Website
 
 ## Uruchomienie
 
-Logo edytuj w głównym pliku `logo.svg`. Polecenia `dev` i `build` automatycznie synchronizują je do `public/logo.svg`, więc kolejne zmiany trafią do strony przy jej uruchomieniu lub budowaniu.
+Logo edytuj w głównych plikach `logo.svg` (szerokie logo nagłówka i stopki) oraz `logo_square.svg` (kwadratowy znak). Polecenia `dev` i `build` automatycznie synchronizują oba pliki do `public/` oraz generują `public/favicon.svg` z kwadratowego znaku, dodając ciemne tło i margines. Kolejne zmiany trafią do strony przy jej uruchomieniu lub budowaniu.
 
 ```powershell
 npm.cmd ci
