@@ -123,18 +123,18 @@ export const projectRepository =
 export const teamMembers = [
   {
     id: "founder",
-    firstName: "First name",
-    lastName: "Last name",
+    firstName: "Kordian",
+    lastName: "Pisarek",
     role: "Founder",
-    focus: "VISION & STRATEGY",
-    photo: "/team-placeholder.svg",
+    focus: "VISION & ARCHITECTURE",
+    photo: "/kp.svg",
     description:
       "Placeholder bio. Add the founder's background, vision for Serenith, and role in bringing the project to life.",
   },
   {
     id: "developer-1",
-    firstName: "First name",
-    lastName: "Last name",
+    firstName: "Maciej",
+    lastName: "Anioł",
     role: "Developer / Mathematician",
     focus: "FHE & CRYPTOGRAPHY",
     photo: "/team-placeholder.svg",
@@ -143,8 +143,8 @@ export const teamMembers = [
   },
   {
     id: "developer-2",
-    firstName: "First name",
-    lastName: "Last name",
+    firstName: "Jakub",
+    lastName: "Stachniak",
     role: "Developer / Mathematician",
     focus: "PROTOCOL & SYSTEMS",
     photo: "/team-placeholder.svg",
@@ -153,8 +153,8 @@ export const teamMembers = [
   },
   {
     id: "developer-3",
-    firstName: "First name",
-    lastName: "Last name",
+    firstName: "Wiktor",
+    lastName: "Kłapsa",
     role: "Developer / Mathematician",
     focus: "MODELS & ALGORITHMS",
     photo: "/team-placeholder.svg",

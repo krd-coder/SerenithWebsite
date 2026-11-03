@@ -24,6 +24,24 @@ function Brand() {
   );
 }
 
+function ResourceActions() {
+  return (
+    <div className="resource-actions">
+      <a className="button button-secondary" href="/litepaper/">
+        Read the litepaper <Icon name="diagonal" size={15} />
+      </a>
+      <a
+        className="button button-secondary"
+        href={projectRepository}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View on GitHub <Icon name="diagonal" size={15} />
+      </a>
+    </div>
+  );
+}
+
 export default function Home() {
   const [menu, setMenu] = useState(false);
   const [stage, setStage] = useState(0);
@@ -255,9 +273,7 @@ export default function Home() {
               >
                 Explore the protocol <Icon name="arrow" size={18} />
               </a>
-              <a className="text-link" href="/litepaper/">
-                Read the litepaper <Icon name="diagonal" size={15} />
-              </a>
+              <ResourceActions />
             </div>
             <div className="hero-proof mono">
               <Icon name="lock" size={13} />
@@ -855,9 +871,7 @@ export default function Home() {
                 <span className="muted">Let discovery stay yours.</span>
               </h2>
             </div>
-            <a className="button button-primary" href="/litepaper/">
-              Explore the litepaper <Icon name="arrow" size={18} />
-            </a>
+            <ResourceActions />
           </div>
         </section>
       </main>
