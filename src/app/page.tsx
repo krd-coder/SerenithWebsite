@@ -10,7 +10,7 @@ import {
   ResearchDocument,
   WorkflowVisual,
 } from "@/components/visuals";
-import { stages, useCases } from "@/lib/content";
+import { projectRepository, stages, teamMembers, useCases } from "@/lib/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -193,6 +193,7 @@ export default function Home() {
               ["The protocol", "#workflow-scroll-track"],
               ["Use cases", "#use-cases"],
               ["Security", "#security"],
+              ["Team", "#team"],
             ].map(([label, href]) => (
               <a key={href} href={href} onClick={() => setMenu(false)}>
                 {label}
@@ -783,6 +784,68 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="repository-link">
+            <Icon name="code" size={20} />
+            <a
+              className="text-link"
+              href={projectRepository}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore serenith-fhe-kernel on GitHub
+              <Icon name="diagonal" size={15} />
+            </a>
+          </div>
+        </section>
+
+        <section
+          id="team"
+          className="team-section section-shell section-spacing"
+          aria-labelledby="team-title"
+        >
+          <div className="section-heading split-heading">
+            <div>
+              <span className="eyebrow">07 / TEAM</span>
+              <h2 id="team-title">
+                The people behind
+                <br />
+                <span className="muted">the possibilities.</span>
+              </h2>
+            </div>
+            <p>
+              One founder. Three developers and mathematicians.
+              <br />
+              A team bringing mathematics and software together to build
+              Serenith.
+            </p>
+          </div>
+          <div className="team-grid">
+            {teamMembers.map((member, index) => (
+              <article className="team-card" key={member.id}>
+                <div className="team-photo">
+                  <img
+                    src={member.photo}
+                    alt={`Photo placeholder for ${member.role.toLowerCase()}${index > 0 ? ` ${index}` : ""}`}
+                    width={480}
+                    height={560}
+                    loading="lazy"
+                  />
+                  <span className="team-number mono" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                  <span className="team-photo-label mono">PHOTO PLACEHOLDER</span>
+                </div>
+                <div className="team-profile">
+                  <span className="eyebrow team-focus">{member.focus}</span>
+                  <h3>
+                    {member.firstName} {member.lastName}
+                  </h3>
+                  <p className="team-role">{member.role}</p>
+                  <p className="team-description">{member.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
           <div className="closing-cta">
             <div>
               <span className="eyebrow">THE NEXT CONNECTION STARTS HERE.</span>
@@ -812,15 +875,16 @@ export default function Home() {
           <div className="footer-links">
             <a href="#workflow-scroll-track">Protocol</a>
             <a href="#security">Security</a>
+            <a href="#team">Team</a>
             <a href="/litepaper/">
               Litepaper <Icon name="diagonal" size={12} />
             </a>
             <a
-              href="https://github.com/zama-ai/tfhe-rs"
+              href={projectRepository}
               target="_blank"
               rel="noopener noreferrer"
             >
-              tfhe-rs on GitHub <Icon name="diagonal" size={12} />
+              Project on GitHub <Icon name="diagonal" size={12} />
             </a>
           </div>
         </div>

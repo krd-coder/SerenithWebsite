@@ -68,9 +68,9 @@ Testy Playwright uruchamiają podgląd statycznego eksportu i sprawdzają sześ�
 
 ## Struktura
 
-- `src/app/page.tsx` — siedem sekcji, nawigacja, animacja przewijania i interakcje.
+- `src/app/page.tsx` — hero i siedem numerowanych sekcji, nawigacja, animacja przewijania i interakcje.
 - `src/components/visuals.tsx` — ikony SVG, animowana sfera Canvas, dokument i sześć stanów kanwy.
-- `src/lib/content.ts` — angielskie teksty etapów i zastosowań.
+- `src/lib/content.ts` — angielskie teksty etapów i zastosowań, profile zespołu oraz adres repozytorium projektu.
 - `src/app/globals.css` — tokeny, układ, animacje i responsywność.
 - `src/app/litepaper/page.tsx` — lokalny szkic opisu architektury.
 - `tests/site.spec.ts` — testy zachowania przeglądarki.
@@ -85,4 +85,6 @@ Przy `prefers-reduced-motion: reduce` animacje są wyłączone, długa sekcja zm
 
 To strona prezentacyjna i wizualizacja protokołu. Nie wykonuje prawdziwego TFHE, transakcji blockchain, uploadu badań ani podpisywania NDA. Wszystkie wyniki w animacji są ilustracją architektury.
 
-Specyfikacja nie podaje oficjalnego adresu repozytorium Serenith ani gotowego litepapera. Dlatego link GitHub jest jawnie opisany jako repozytorium biblioteki `tfhe-rs`, a litepaper to lokalny **szkic architektury**. Przed publikacją podmień go na zatwierdzony dokument i dodaj właściwy adres repozytorium projektu. Treści o bezpieczeństwie wymagają potwierdzenia względem rzeczywistej implementacji.
+Landing page prowadzi do publicznego repozytorium projektu: [serenith-fhe-kernel](https://github.com/krd-coder/serenith-fhe-kernel). Litepaper to lokalny **szkic architektury** — przed publikacją podmień go na zatwierdzony dokument. Treści o bezpieczeństwie wymagają potwierdzenia względem rzeczywistej implementacji.
+
+Sekcja `07 / TEAM` zawiera cztery profile: Founder i trzech Developer / Mathematician. Imiona, nazwiska, role, opisy i ścieżki zdjęć edytuj w `teamMembers` w `src/lib/content.ts`. Obecne dane i grafika `public/team-placeholder.svg` są placeholderami do zastąpienia właściwymi materiałami zespołu.

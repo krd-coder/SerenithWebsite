@@ -115,3 +115,50 @@ export const useCases = [
     tags: ["Academic research", "Priority records", "Decentralized science"],
   },
 ] as const;
+
+export const projectRepository =
+  "https://github.com/krd-coder/serenith-fhe-kernel";
+
+// Replace these profiles and the portrait path when team details are ready.
+export const teamMembers = [
+  {
+    id: "founder",
+    firstName: "First name",
+    lastName: "Last name",
+    role: "Founder",
+    focus: "VISION & STRATEGY",
+    photo: "/team-placeholder.svg",
+    description:
+      "Placeholder bio. Add the founder's background, vision for Serenith, and role in bringing the project to life.",
+  },
+  {
+    id: "developer-1",
+    firstName: "First name",
+    lastName: "Last name",
+    role: "Developer / Mathematician",
+    focus: "FHE & CRYPTOGRAPHY",
+    photo: "/team-placeholder.svg",
+    description:
+      "Placeholder bio. Add this team member's background in mathematics, encryption, and privacy-preserving computation.",
+  },
+  {
+    id: "developer-2",
+    firstName: "First name",
+    lastName: "Last name",
+    role: "Developer / Mathematician",
+    focus: "PROTOCOL & SYSTEMS",
+    photo: "/team-placeholder.svg",
+    description:
+      "Placeholder bio. Add this team member's engineering experience and contribution to the protocol and its implementation.",
+  },
+  {
+    id: "developer-3",
+    firstName: "First name",
+    lastName: "Last name",
+    role: "Developer / Mathematician",
+    focus: "MODELS & ALGORITHMS",
+    photo: "/team-placeholder.svg",
+    description:
+      "Placeholder bio. Add this team member's research interests and work on mathematical models, algorithms, and validation.",
+  },
+] as const;
