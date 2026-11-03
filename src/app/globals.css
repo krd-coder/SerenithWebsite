@@ -1410,8 +1410,7 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
-.team-number,
-.team-photo-label {
+.team-number {
   position: absolute;
   left: 18px;
   color: #95b9f7;
@@ -1419,9 +1418,6 @@ h2 {
 }
 .team-number {
   top: 16px;
-}
-.team-photo-label {
-  bottom: 16px;
 }
 .team-profile {
   padding: 24px 20px 27px;

@@ -849,7 +849,6 @@ export default function Home() {
                   <span className="team-number mono" aria-hidden="true">
                     0{index + 1}
                   </span>
-                  <span className="team-photo-label mono">PHOTO PLACEHOLDER</span>
                 </div>
                 <div className="team-profile">
                   <span className="eyebrow team-focus">{member.focus}</span>

@@ -157,7 +157,7 @@ export const teamMembers = [
     lastName: "Kłapsa",
     role: "Developer / Mathematician",
     focus: "MODELS & ALGORITHMS",
-    photo: "/team-placeholder.svg",
+    photo: "/wk.svg",
     description:
       "Placeholder bio. Add this team member's research interests and work on mathematical models, algorithms, and validation.",
   },
