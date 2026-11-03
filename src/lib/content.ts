@@ -129,7 +129,7 @@ export const teamMembers = [
     focus: "VISION & ARCHITECTURE",
     photo: "/kp.svg",
     description:
-      "Placeholder bio. Add the founder's background, vision for Serenith, and role in bringing the project to life.",
+      "Polish Math and CS Olympiad finalist. University of Warsaw CS & Math student. Secured startup investment; manages in-person events for MIKO's 2,000+ member math community.",
   },
   {
     id: "developer-1",
@@ -137,9 +137,9 @@ export const teamMembers = [
     lastName: "Anioł",
     role: "Developer / Mathematician",
     focus: "FHE & CRYPTOGRAPHY",
-    photo: "/team-placeholder.svg",
+    photo: "/ma.svg",
     description:
-      "Placeholder bio. Add this team member's background in mathematics, encryption, and privacy-preserving computation.",
+      "Mathematics and computer science student with a focus on homomorphic encryption and privacy-preserving computation.",
   },
   {
     id: "developer-2",
@@ -147,9 +147,9 @@ export const teamMembers = [
     lastName: "Stachniak",
     role: "Developer / Mathematician",
     focus: "PROTOCOL & SYSTEMS",
-    photo: "/team-placeholder.svg",
+    photo: "/js.svg",
     description:
-      "Placeholder bio. Add this team member's engineering experience and contribution to the protocol and its implementation.",
+      "Engineer with experience in distributed systems and cryptographic protocol design.",
   },
   {
     id: "developer-3",
@@ -159,6 +159,6 @@ export const teamMembers = [
     focus: "MODELS & ALGORITHMS",
     photo: "/wk.svg",
     description:
-      "Placeholder bio. Add this team member's research interests and work on mathematical models, algorithms, and validation.",
+      "Mathematics and computer science student with a focus on mathematical modeling and algorithmic development.",
   },
 ] as const;
