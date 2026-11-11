@@ -129,7 +129,7 @@ export const teamMembers = [
     focus: "VISION & ARCHITECTURE",
     photo: "/kp.svg",
     description:
-      "Polish Math and CS Olympiad finalist. University of Warsaw CS & Math student. Secured startup investment; manages in-person events for MIKO's 2,000+ member math community.",
+      "National Math and Informatics Olympiad Finalist shaped by early startup setbacks and high-pressure live-event execution. He built MIKO from scratch into a 2,000+ member Olympiad network and directed complex events for hundreds of participants. At Serenith, he architected the core 1-RTT consensus protocol to bridge zero-trust FHE with B2B execution",
   },
   {
     id: "developer-1",
@@ -139,7 +139,7 @@ export const teamMembers = [
     focus: "FHE & CRYPTOGRAPHY",
     photo: "/ma.svg",
     description:
-      "Mathematics and computer science student with a focus on homomorphic encryption and privacy-preserving computation.",
+      "Theoretical Computer Science student at Jagiellonian University, former Software Engineering Intern at Dropbox, Polish Informatics Olympiad laureate, and Mathematics Olympiad finalist. Two-time bronze medalist in the Polish HS Team Programming Championships. Combines a strong foundation in algorithms and mathematics with hands-on experience building production software systems. At Serenith, focusing on cryptography.",
   },
   {
     id: "developer-2",
@@ -159,6 +159,6 @@ export const teamMembers = [
     focus: "MODELS & ALGORITHMS",
     photo: "/wk.svg",
     description:
-      "Mathematics and computer science student with a focus on mathematical modeling and algorithmic development.",
+      "Econverse National Finalist, hackathon winner, and CS+Economethry student at AGH. A confident public speaker delivering lectures on analytical mathematics. He merges AI, quantitative finance, and ZKP cryptography to architect advanced synthetic market data engines, robust KMS, and secure on-chain execution.",
   },
 ] as const;
