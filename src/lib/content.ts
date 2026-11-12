@@ -151,7 +151,7 @@ export const teamMembers = [
     photo: "/js.svg",
     github: "https://github.com/jakubstachniak-art",
     description:
-      "Engineer with experience in distributed systems and cryptographic protocol design.",
+      "Two-time National Mathematics Olympiad finalist and Theoretical Computer Science student at Jagiellonian University. Combines a rigorous foundation in competition mathematics with hands-on systems engineering to design cryptographic protocols and distributed infrastructure. At Serenith, he engineers the distributed KMS node network, client-side MRL encryption pipeline, and fault-tolerant execution layer.",
   },
   {
     id: "developer-3",
