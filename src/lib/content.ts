@@ -119,7 +119,6 @@ export const useCases = [
 export const projectRepository =
   "https://github.com/krd-coder/serenith-fhe-kernel";
 
-// Replace these profiles and the portrait path when team details are ready.
 export const teamMembers = [
   {
     id: "founder",
@@ -128,6 +127,7 @@ export const teamMembers = [
     role: "Founder",
     focus: "VISION & ARCHITECTURE",
     photo: "/kp.svg",
+    github: "https://github.com/krd-coder",
     description:
       "National Math and Informatics Olympiad Finalist shaped by early startup setbacks and high-pressure live-event execution. He built MIKO from scratch into a 2,000+ member Olympiad network and directed complex events for hundreds of participants. At Serenith, he architected the core 1-RTT consensus protocol to bridge zero-trust FHE with B2B execution",
   },
@@ -138,6 +138,7 @@ export const teamMembers = [
     role: "Developer / Mathematician",
     focus: "FHE & CRYPTOGRAPHY",
     photo: "/ma.svg",
+    github: "https://github.com/Maciej-A",
     description:
       "Theoretical Computer Science student at Jagiellonian University, former Software Engineering Intern at Dropbox, Polish Informatics Olympiad laureate, and Mathematics Olympiad finalist. Two-time bronze medalist in the Polish HS Team Programming Championships. Combines a strong foundation in algorithms and mathematics with hands-on experience building production software systems. At Serenith, focusing on cryptography.",
   },
@@ -148,6 +149,7 @@ export const teamMembers = [
     role: "Developer / Mathematician",
     focus: "PROTOCOL & SYSTEMS",
     photo: "/js.svg",
+    github: "https://github.com/jakubstachniak-art",
     description:
       "Engineer with experience in distributed systems and cryptographic protocol design.",
   },
@@ -158,7 +160,8 @@ export const teamMembers = [
     role: "Developer / Mathematician",
     focus: "MODELS & ALGORITHMS",
     photo: "/wk.svg",
+    github: "https://github.com/V3IX",
     description:
-      "Econverse National Finalist, hackathon winner, and CS+Economethry student at AGH. A confident public speaker delivering lectures on analytical mathematics. He merges AI, quantitative finance, and ZKP cryptography to architect advanced synthetic market data engines, robust KMS, and secure on-chain execution.",
+      "Econverse National Finalist, hackathon winner, and CS + Econometrics student at AGH. A confident public speaker delivering lectures on analytical mathematics. He merges AI, quantitative finance, and ZKP cryptography to architect advanced synthetic market data engines, robust KMS, and secure on-chain execution.",
   },
 ] as const;

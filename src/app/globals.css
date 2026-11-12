@@ -1384,8 +1384,39 @@ h2 {
 .repository-link .text-link {
   overflow-wrap: anywhere;
 }
+.pitch-section,
 .team-section {
   border-top: 1px solid var(--line);
+}
+.pitch-video {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.pitch-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.pitch-link {
+  margin-top: 20px;
+}
+.team-github {
+  margin-top: 14px;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.footer-email {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--light-blue);
+  font-size: 12px;
+}
+.footer-email:hover {
+  text-decoration: underline;
 }
 .team-grid {
   display: grid;

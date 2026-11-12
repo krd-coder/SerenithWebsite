@@ -10,7 +10,12 @@ import {
   ResearchDocument,
   WorkflowVisual,
 } from "@/components/visuals";
-import { projectRepository, stages, teamMembers, useCases } from "@/lib/content";
+import {
+  projectRepository,
+  stages,
+  teamMembers,
+  useCases,
+} from "@/lib/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -211,6 +216,7 @@ export default function Home() {
               ["The protocol", "#workflow-scroll-track"],
               ["Use cases", "#use-cases"],
               ["Security", "#security"],
+              ["Pitch", "#pitch"],
               ["Team", "#team"],
             ].map(([label, href]) => (
               <a key={href} href={href} onClick={() => setMenu(false)}>
@@ -815,13 +821,54 @@ export default function Home() {
         </section>
 
         <section
+          id="pitch"
+          className="pitch-section section-shell section-spacing"
+          aria-labelledby="pitch-title"
+        >
+          <div className="section-heading split-heading">
+            <div>
+              <span className="eyebrow">07 / PRODUCT PITCH</span>
+              <h2 id="pitch-title">
+                Meet Serenith.
+                <br />
+                <span className="muted">In five minutes.</span>
+              </h2>
+            </div>
+            <p>
+              Watch our five-minute pitch to discover the product and the vision
+              behind private research collaboration.
+            </p>
+          </div>
+          <div className="pitch-video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/OQxRaKvwcNI"
+              title="Serenith — five-minute product pitch"
+              width={1280}
+              height={720}
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <a
+            className="text-link pitch-link"
+            href="https://youtu.be/OQxRaKvwcNI"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on YouTube <Icon name="diagonal" size={15} />
+          </a>
+        </section>
+
+        <section
           id="team"
           className="team-section section-shell section-spacing"
           aria-labelledby="team-title"
         >
           <div className="section-heading split-heading">
             <div>
-              <span className="eyebrow">07 / TEAM</span>
+              <span className="eyebrow">08 / TEAM</span>
               <h2 id="team-title">
                 The people behind
                 <br />
@@ -830,8 +877,7 @@ export default function Home() {
             </div>
             <p>
               One founder. Three developers and mathematicians.
-              <br />
-              A team bringing mathematics and software together to build
+              <br />A team bringing mathematics and software together to build
               Serenith.
             </p>
           </div>
@@ -856,6 +902,16 @@ export default function Home() {
                     {member.firstName} {member.lastName}
                   </h3>
                   <p className="team-role">{member.role}</p>
+                  <a
+                    className="text-link team-github"
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.firstName} ${member.lastName} on GitHub`}
+                  >
+                    GitHub / {member.github.split("/").pop()}
+                    <Icon name="diagonal" size={13} />
+                  </a>
                   <p className="team-description">{member.description}</p>
                 </div>
               </article>
@@ -884,10 +940,14 @@ export default function Home() {
               <br />
               Protect the discovery.
             </p>
+            <a className="footer-email" href="mailto:contact@serenith.org">
+              contact@serenith.org
+            </a>
           </div>
           <div className="footer-links">
             <a href="#workflow-scroll-track">Protocol</a>
             <a href="#security">Security</a>
+            <a href="#pitch">Pitch</a>
             <a href="#team">Team</a>
             <a href="/litepaper/">
               Litepaper <Icon name="diagonal" size={12} />
