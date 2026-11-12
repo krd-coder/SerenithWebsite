@@ -22,11 +22,16 @@ test("renders all sections, local assets and the litepaper without browser error
   await page.locator(".header-cta").click();
   await expect(page).toHaveURL(/litepaper/);
   await expect(
-    page.getByText("Architecture draft", { exact: false }),
+    page.getByRole("heading", { name: "Technical litepaper" }),
   ).toBeVisible();
+  const pdfLink = page.getByRole("link", { name: "Open PDF" });
+  const pdf = await page.request.get((await pdfLink.getAttribute("href"))!);
+  expect(pdf.status()).toBe(200);
+  expect(pdf.headers()["content-type"]).toBe("application/pdf");
+  expect((await pdf.body()).subarray(0, 5).toString()).toBe("%PDF-");
   await expect(
-    page.getByRole("heading", { name: "03 / Security model" }),
-  ).toBeAttached();
+    page.getByTitle("Serenith Technical Litepaper PDF viewer"),
+  ).toBeVisible();
   expect(errors).toEqual([]);
 });
 

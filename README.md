@@ -72,7 +72,7 @@ Testy Playwright uruchamiają podgląd statycznego eksportu i sprawdzają sześ�
 - `src/components/visuals.tsx` — ikony SVG, animowana sfera Canvas, dokument i sześć stanów kanwy.
 - `src/lib/content.ts` — angielskie teksty etapów i zastosowań, profile zespołu oraz adres repozytorium projektu.
 - `src/app/globals.css` — tokeny, układ, animacje i responsywność.
-- `src/app/litepaper/page.tsx` — lokalny szkic opisu architektury.
+- `src/app/litepaper/page.tsx` — podgląd `public/Serenith Technical Litepaper.pdf` w viewerze PDF, z otwieraniem i pobieraniem dokumentu.
 - `tests/site.spec.ts` — testy zachowania przeglądarki.
 
 ## Zachowanie
@@ -85,6 +85,6 @@ Przy `prefers-reduced-motion: reduce` animacje są wyłączone, długa sekcja zm
 
 To strona prezentacyjna i wizualizacja protokołu. Nie wykonuje prawdziwego TFHE, transakcji blockchain, uploadu badań ani podpisywania NDA. Wszystkie wyniki w animacji są ilustracją architektury.
 
-Landing page prowadzi do publicznego repozytorium projektu: [serenith-fhe-kernel](https://github.com/krd-coder/serenith-fhe-kernel). Litepaper to lokalny **szkic architektury** — przed publikacją podmień go na zatwierdzony dokument. Treści o bezpieczeństwie wymagają potwierdzenia względem rzeczywistej implementacji.
+Landing page prowadzi do publicznego repozytorium projektu: [serenith-fhe-kernel](https://github.com/krd-coder/serenith-fhe-kernel). Podstrona `/litepaper/` wyświetla dokument `public/Serenith Technical Litepaper.pdf` we wbudowanym viewerze PDF przeglądarki. Plik można też otworzyć w nowej karcie lub pobrać. Treści o bezpieczeństwie wymagają potwierdzenia względem rzeczywistej implementacji.
 
 Sekcja `07 / TEAM` zawiera cztery profile: Founder i trzech Developer / Mathematician. Imiona, nazwiska, role, opisy i ścieżki zdjęć edytuj w `teamMembers` w `src/lib/content.ts`. Obecne dane i grafika `public/team-placeholder.svg` są placeholderami do zastąpienia właściwymi materiałami zespołu.
